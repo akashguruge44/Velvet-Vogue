@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unisex Belts - Velvet Vogue</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .search-bar {
+      border: 1px solid #ddd;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    /* Main Layout */
+    .container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 30px;
+      padding: 30px 40px;
+    }
+
+    /* Sidebar */
+    .sidebar h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .filter {
+      margin-bottom: 20px;
+    }
+
+    .filter h3 {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .filter ul {
+      list-style: none;
+    }
+
+    .filter ul li {
+      font-size: 14px;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-4px);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .product-card h4 {
+      font-size: 14px;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    .product-card p {
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>VELVET VOGUE</h1>
+    <nav>
+      <ul>
+        <li><a href="#">MEN</a></li>
+        <li><a href="#">WOMEN</a></li>
+        <li><a href="#">ACCESSORIES</a></li>
+        <li><a href="#">GIFTS</a></li>
+      </ul>
+    </nav>
+    <input class="search-bar" type="text" placeholder="Search for a Product">
+  </header>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belts Collection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .products {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h4 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+    }
+
+    .product-card p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #111;
+    }
+
+    /* Quick Add */
+    .quick-add {
+      margin-top: 15px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      text-align: left;
+    }
+
+    .quick-add h5 {
+      font-size: 14px;
+      margin: 0 0 8px;
+      font-weight: bold;
+    }
+
+    .sizes {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .sizes button {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .sizes button.active {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    .sizes button:disabled {
+      background: #eee;
+      color: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <section class="products">
+
+      <div class="product-card">
+        <img src="classicletherbelt.png" alt="Classic Leather Belt">
+        <h4>Classic Leather Belt</h4>
+        <p>Premium Leather | Formal Wear</p>
+        <p class="price">Rs 2000</p>
+        <div class="quick-add">
+          <h5>QUICK ADD</h5>
+          <div class="sizes">
+            <button onclick="addToCart('Classic Leather Belt', 2000, 'S')">S</button>
+      <button onclick="addToCart('Classic Leather Belt', 2000, 'M')">M</button>
+      <button onclick="addToCart('Classic Leather Belt', 2000, 'L')">L</button>
+      <button onclick="addToCart('Classic Leather Belt', 2000, 'XL')">XL</button>
+            <a href="cart.html" class="cart-btn"
+  position:fixed; bottom:20px; right:20px; 
+  background:#111; color:#fff; padding:12px 15px; 
+  border-radius:50%; font-size:18px; text-decoration:none;">🛒</a>
+  <body>
+      <script>
+  function addToCart(product, price, size) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ product, price, size });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product} (Size: ${size}) added to cart!`);
+  }
+</script>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="classicletherbelt.png"Casual Canvas Belt">
+        <h4>Casual Canvas Belt</h4>
+        <p>Durable | Everyday Style</p>
+        <p class="price">Rs 1500</p>
+        <div class="quick-add">
+          <h5>QUICK ADD</h5>
+          <div class="sizes">
+            <button onclick="addToCart('Casual Canvas Belt', 1500, 'S')">S</button>
+      <button onclick="addToCart('Casual Canvas Belt', 1500, 'M')">M</button>
+      <button onclick="addToCart('Casual Canvas Belt', 1500, 'L')">L</button>
+      <button onclick="addToCart('Casual Canvas Belt', 1500, 'XL')">XL</button>
+            <a href="cart.html" class="cart-btn"
+  position:fixed; bottom:20px; right:20px; 
+  background:#111; color:#fff; padding:12px 15px; 
+  border-radius:50%; font-size:18px; text-decoration:none;">🛒</a>
+  <body>
+      <script>
+  function addToCart(product, price, size) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ product, price, size });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product} (Size: ${size}) added to cart!`);
+  }
+</script>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="braidedbelt.png" alt="Designer Buckle Belt">
+        <h4>Braided Belt</h4>
+        <p>Luxury Finish | Party Wear</p>
+        <p class="price">Rs 1800</p>
+        <div class="quick-add">
+          <h5>QUICK ADD</h5>
+          <div class="sizes">
+            <button onclick="addToCart('Braided Belt', 1800, 'S')">S</button>
+      <button onclick="addToCart('Braided Belt', 1800, 'M')">M</button>
+      <button onclick="addToCart('Braided Belt', 1800, 'L')">L</button>
+      <button onclick="addToCart('Braided Belt', 1800, 'XL')">XL</button>
+            <a href="cart.html" class="cart-btn"
+  position:fixed; bottom:20px; right:20px; 
+  background:#111; color:#fff; padding:12px 15px; 
+  border-radius:50%; font-size:18px; text-decoration:none;">🛒</a>
+  <body>
+      <script>
+  function addToCart(product, price, size) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ product, price, size });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product} (Size: ${size}) added to cart!`);
+  }
+</script>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="elegantformalbelt.png" alt="Woven Stretch Belt">
+        <h4>Elegant Formal Belt</h4>
+        <p>Flexible Fit | Smart Casual</p>
+        <p class="price">Rs 2200</p>
+        <div class="quick-add">
+          <h5>QUICK ADD</h5>
+          <div class="sizes">
+            <button onclick="addToCart('Elegant Formal Belt', 2200, 'S')">S</button>
+      <button onclick="addToCart('Elegant Formal Belt', 2200, 'M')">M</button>
+      <button onclick="addToCart('Elegant Formal Belt', 2200, 'L')">L</button>
+      <button onclick="addToCart('Elegant Formal Belt', 2200, 'XL')">XL</button>
+            <a href="cart.html" class="cart-btn"
+  position:fixed; bottom:20px; right:20px; 
+  background:#111; color:#fff; padding:12px 15px; 
+  border-radius:50%; font-size:18px; text-decoration:none;">🛒</a>
+  <body>
+      <script>
+  function addToCart(product, price, size) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push({ product, price, size });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${product} (Size: ${size}) added to cart!`);
+  }
+</script>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belts Collection</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .products {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h4 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+    }
+
+    .product-card p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #111;
+    }
+
+    /* Quick Add */
+    .quick-add {
+      margin-top: 15px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      text-align: left;
+    }
+
+    .quick-add h5 {
+      font-size: 14px;
+      margin: 0 0 8px;
+      font-weight: bold;
+    }
+
+    .sizes {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .sizes button {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .sizes button.active {
+      background: #111;
+      color: #fff;
+      border-color: #111;
+    }
+
+    .sizes button:disabled {
+      background: #eee;
+      color: #aaa;
+      cursor: not-allowed;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-column {
+      margin: 10px;
+      min-width: 150px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #bbb;
+      text-decoration: none;
+      margin: 4px 0;
+      font-size: 13px;
+    }
+
+    .footer-column a:hover {
+      color: #fff;
+    }
+
+    .footer-btn {
+      display: block;
+      margin: 5px 0;
+      padding: 8px;
+      border: none;
+      background: #444;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 13px;
+    }
+
+    .footer-btn:hover {
+      background: #666;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 10px;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .footer-links a {
+      margin: 0 8px;
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-social {
+      margin-top: 10px;
+    }
+
+    .footer-social a {
+      margin: 0 8px;
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    .footer-social a:hover {
+      color: #fff;
+    }
+
+    /* Floating Chat */
+    .chat-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #111;
+      color: #fff;
+      padding: 12px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <footer>
+    <div class="footer-container">
+      <!-- Menu -->
+      <div class="footer-column">
+        <h3>MENU</h3>
+        <a href="#">Home</a>
+        <a href="#">Last Chance</a>
+      </div>
+
+      <!-- Support -->
+      <div class="footer-column">
+        <h3>SUPPORT</h3>
+        <a href="#">FAQ</a>
+        <a href="#">Delivery</a>
+        <a href="#">Make A Return</a>
+        <a href="#">Orders</a>
+        <a href="#">Returns</a>
+        <a href="#">Submit A Request</a>
+        <a href="#">Careers</a>
+      </div>
+
+      <!-- My Account -->
+      <div class="footer-column">
+        <h3>MY ACCOUNT</h3>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+      </div>
+
+      <!-- Buttons -->
+      <div class="footer-column extra">
+        <button class="footer-btn">EMAIL SIGN UP</button>
+        <button class="footer-btn">TRACK YOUR ORDER</button>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 | Velvet Vogue | All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#">Contact Information</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+    </div>
+  </footer>
+
+  <!-- Floating Chat -->
+  <a href="#" class="chat-btn">💬</a>
+
+</body>
+</html>
+
