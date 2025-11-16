@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.login-container, .dashboard {
+    background: #222;
+    padding: 30px;
+    width: 300px;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+
+input, button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: crimson;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background: darkred;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: crimson;
+    text-decoration: none;
+    font-weight: bold;
+}
+ul li a:hover {
+    text-decoration: underline;
+}
